@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>Angular JS Demo</title>
+        <link rel="stylesheet" media="screen" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="assets/prettify/prettify.css">
+    </head>
+    
+    <body data-spy="scroll" data-target=".nav">
+        <div class="container">
+            <div class="page-header">
+                <h1>Angular JS Demo</h1>
+            </div>
+            <section id="basics">
+                <h2>Simple Application</h2>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Basic AngularJS App</h3>
+                                <p>Basic setup for angularjs application. Without modules or cintrollers. With <b>ng-app</b> to bootstrap application.</p>
+                                <p>
+                                    <a href="demo/basic/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Isolated Application</h3>
+                                <p>We isolate angularjs app in <b>&lt;div&gt;</b> element. It's possible to have multiple applications on the same page but we have to use manual bootstrapping to do this.</p>
+                                <p>
+                                    <a href="demo/basic.1/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>2 App Instances</h3>
+                                <p>We trying to auto-bootstrap 2 angularjs applications. This doesn't work.</p>
+                                <p>
+                                    <a href="demo/basic.2/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>App with ng-init</h3>
+                                <p>We can use ng-init as initialization task. But with controllers this technique is rare used.</p>
+                                <p>
+                                    <a href="demo/basic.3/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Basic Controller</h3>
+                                <p>We define controller in javascript code. By default controller can be separate function.</p>
+                                <p>We can see that <b>$scope</b> was injected in controller.</p>
+                                <p>
+                                    <a href="demo/basic.4/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Parent-Child Scope Problem</h3>
+                                <p>We have parent and child scopes and "broken" model.</p>
+                                <p>
+                                    <a href="demo/basic.5/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="todo">
+                <h2>ToDo List Application</h2>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Template</h3>
+                                <p>Just Template.</p>
+                                <p>
+                                    <a href="demo/todo/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Controller</h3>
+                                <p>Added controller. Shows how to define and use module.</p>
+                                <p>
+                                    <a href="demo/todo.1/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Model</h3>
+                                <p>Model created in controller.</p>
+                                <p>
+                                    <a href="demo/todo.2/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Binding</h3>
+                                <p>Added binding, including <b>ng-repeat</b> to iterate through array elements.</p>
+                                <p>
+                                    <a href="demo/todo.3/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Function Exposed Through $scope</h3>
+                                <p>Implemented todos counting using function exposed through <b>$scope</b>.</p>
+                                <p>
+                                    <a href="demo/todo.4/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Styling</h3>
+                                <p>Using style recalculation.</p>
+                                <p>
+                                    <a href="demo/todo.5/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Adding New ToDo</h3>
+                                <p><b>ng-click</b> used to link event with function in <b>$scope</b>.</p>
+                                <p>
+                                    <a href="demo/todo.6/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Archiving</h3>
+                                <p>Same technique.</p>
+                                <p>
+                                    <a href="demo/todo.7/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>ng-disables usage</h3>
+                                <p>We disable button until input filled with text.</p>
+                                <p>
+                                    <a href="demo/todo.8/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="validation">
+                <h2>Validation</h2>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Basic validation</h3>
+                                <p>Added <b>ng-maxlength</b> to validate text length.</p>
+                                <p>
+                                    <a href="demo/todo.9/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Error object</h3>
+                                <p>Exposed error object.</p>
+                                <p>
+                                    <a href="demo/todo.10/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="validation">
+                <h2>Backend $resource</h2>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Backend usage</h3>
+                                <p>We use REST backend to save data in mongolab.</p>
+                                <p>
+                                    <a href="demo/todo.11/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="validation">
+                <h2>Routing $resource</h2>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>Templates/views/partials usage</h3>
+                                <p>Routing and tempates example.</p>
+                                <p>
+                                    <a href="demo/todo.12/" class="btn btn-primary">View</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/prettify/prettify.js"></script>
+    <script>
+        window.prettyPrint();
+    </script>
+
+</html>

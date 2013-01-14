@@ -1,0 +1,8 @@
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.ng-invalid {
+  border: 3px solid red;
+}

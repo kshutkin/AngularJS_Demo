@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="TodoModule">
+ <head>
+   <link rel="stylesheet" media="screen" href="../../assets/bootstrap/css/bootstrap.min.css">
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+   <script src="app.js"></script>
+ </head>
+ <body class="container">
+  <h2>Todo</h2>
+  <div ng-controller="TodoCtrl">
+    <span> # of # remaining</span>
+    [ <a href="">archive</a> ]
+    <ul class="unstyled">
+      <li>
+        <input type="checkbox">
+        <span class="done-true">Some text</span>
+      </li>
+    </ul>
+    <form>
+      <input type="text" size="30"
+             placeholder="add new todo here">
+      <input class="btn btn-primary" type="submit" value="add">
+    </form>
+  </div>
+ </body>
+</html>
