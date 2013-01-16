@@ -79,7 +79,7 @@ module.controller("DemoCtrl", function($scope) {
     }
 });
 
-module.directive("showAfter", function($timeout, $parse) {
+module.directive("showAfter", function($timeout) {
     return function(scope, element, attrs) {
         var timeToShow = scope.$eval(attrs.showAfter);
         if (timeToShow > 0) {
