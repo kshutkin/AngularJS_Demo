@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="ShowDirectives">
+    
+    <head>
+        <link rel="stylesheet" media="screen" href="../../assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="app.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body class="container">
+        <div class="page-header">
+            <h1>Directives Showcase</h1>
+        </div>
+        <div ng-controller="DemoCtrl">
+            <h2>Show-animate</h2>
+            <input type="button" class="btn btn-primary" ng-click="showFlag=!showFlag"
+            ng-class="{false:'btn-inverse'}[showFlag]" value="{{{true:'Hide', false:'Show'}[showFlag]}}"></input>
+            <div show-animate="showFlag">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled it to
+                make a type specimen book. It has survived not only five centuries, but
+                also the leap into electronic typesetting, remaining essentially unchanged.
+                It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software
+                like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <h2>Drag&drop</h2>
+            <ul class="thumbnails">
+                <li ng-repeat="bucket in buckets" class="span4" droppable-for="{{colorsStr(bucket.colors)}}" droppable-hover-class="dark" droppable-active-class="red-border" drope="dropeBadge(draggable, bucket)">
+                    <span ng-repeat="color in bucket.colors" class="label label-{{classStr(color)}}">{{colorStr(color)}}</span>
+                    <div class="thumbnail well box">
+                        <span show-after="getTime(badge)" ng-repeat="badge in bucket.badges" class="badge badge-{{classStr(badge.color)}}" draggable="{{colorStr(badge.color)}}">{{colorStr(badge.color)}}</span>
+                    </div>
+                </li>
+            </ul>
+            <h2>Component demo</h2>
+            <input ng-model="title">
+            <br>
+            <textarea ng-model="text"></textarea>
+            <br/>
+            <pane title="{{title}}">{{text}}</pane>
+        </div>
+    </body>
+
+</html>
