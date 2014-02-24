@@ -1,4 +1,4 @@
-var module = angular.module("TodoModule", ['ngResource']);
+var module = angular.module("TodoModule", ['ngResource', 'ngRoute']);
     module.controller("TodoCtrl", function($scope, Item) {
         $scope.todos = Item.query();
         

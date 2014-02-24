@@ -1,4 +1,4 @@
 angular.module("TodoModule", [])
-    .controller("TodoCtrl", function() {
+.controller("TodoCtrl", function() {
         
-    });
+});
