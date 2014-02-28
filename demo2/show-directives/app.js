@@ -1,8 +1,6 @@
 var module = angular.module("ShowDirectives", []);
 
 module.controller("DemoCtrl", function($scope) {
-    $scope.showFlag = true;
-
     var random = function(n) {
         return Math.floor(1 + Math.random() * (n));
     };
@@ -108,6 +106,7 @@ module.directive('input', function() {
     return {
         restrict: 'E',
         require: '?ngModel',
+        priority: 1000,
         link: function(scope, elm, attr, ngModelCtrl) {
             if (!ngModelCtrl) return;
 
@@ -173,6 +172,9 @@ module.directive('pane', function() {
         scope: {
             title: '@'
         },
-        template: '<div style="border: 1px solid black;">' + '<div style="background-color: gray">{{title}}</div>' + '<div ng-transclude></div>' + '</div>'
+        template: '<div style="border: 1px solid black;">' + 
+            '<div style="background-color: gray">{{title}}</div>' + 
+            '<div ng-transclude></div>' + 
+            '</div>'
     };
 });

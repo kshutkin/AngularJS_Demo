@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="FiltersDemo">
+ <head>
+    <link rel="stylesheet" media="screen" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.2.13/i18n/angular-locale_ru-ru.js"></script>
+    <script src="app.js"></script>
+ </head>
+ <body ng-controller="DemoController">
+    <div class="container">
+        <p><select ng-model="locales.current" ng-options="locale for locale in locales.all"></select>
+        <p><input type="text" ng-model="name">
+        <p>{{name | hello}}</p>
+        <p><input type="text" ng-model="amount">
+        <p>{{amount | currency}}</p>
+    </div>
+ </body>
+</html>

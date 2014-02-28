@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="DirectivesDemo">
+ <head>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+   <script src="app.js"></script>
+   <script src="directive.js"></script>
+ </head>
+ <body ng-init="testValue='Test1'">
+    &lt;div my-directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div my-directive="testValue"></div>
+    &lt;div my:directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div my:directive="testValue"></div>
+    &lt;div my_directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div my_directive="testValue"></div>
+    &lt;div my-directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div my-directive="testValue"></div> 
+    &lt;div data-my-directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div data-my-directive="testValue"></div> 
+    &lt;div x-my-directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div x-my-directive="testValue"></div>
+    &lt;div data-my-:_directive=&quot;testValue&quot;&gt;&lt;/div&gt;
+    <div data-my-:_directive="testValue"></div>
+    
+    <br><br>
+    
+    &lt;br&gt;&lt;my-directive my-directive=&quot;testValue&quot;&gt;&lt;/my-directive&gt;
+    <br><my-directive my-directive="testValue"></my-directive>
+    <br>&lt;div class=&quot;my-directive: testValue;&quot;&gt;&lt;/div&gt;
+    <div class="my-directive: testValue;"></div>
+    &lt;!-- directive: my-directive testValue --&gt;
+    <!-- directive: my-directive testValue; -->
+ </body>
+</html>
