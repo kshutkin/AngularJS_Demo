@@ -5,4 +5,8 @@ app.controller("DemoController", function ($scope, $http) {
     success(function (data) {
         $scope.users = data;
     });
+    
+    $scope.fullName = function () {
+        return item.fname + " " + item.lname;
+    };
 });

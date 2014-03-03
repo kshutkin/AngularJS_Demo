@@ -1,6 +1,7 @@
 var app = angular.module("FiltersDemo", []);
 
 app.controller("DemoController", function ($scope) {
+    
 });
 
 app.config(function ($filterProvider, $provide) {
@@ -10,9 +11,9 @@ app.config(function ($filterProvider, $provide) {
         };
     });
     
-    /*$provide.decorator("helloFilter", function ($delegate) {
+    $provide.decorator("helloFilter", function ($delegate) {
         return function (value) {
             return "Good morning (" + $delegate(value) + ")";
         };
-    });*/
+    });
 });
