@@ -20,10 +20,6 @@ app.value("TestValue", "TestValueValue");
 
 app.constant("TestConstant", "TestConstantValue");
 
-app.config(function (TestProvider) {
-    TestProvider.setValue("AnotherTestProviderValue");
-});
-
 app.provider("TestProvider", function () {
     
     var value = "TestProviderValue";
@@ -33,12 +29,12 @@ app.provider("TestProvider", function () {
             return value;
         },
         
-        setValue : function (val) {
-            value = val;
-        } 
+        setValue : function (v) {
+            value = v;
+        }
     };
 });
 
-app.run(function () {
-    
+app.config(function (TestProviderProvider) {
+    TestProviderProvider.setValue("ChangedProviderValue");
 });

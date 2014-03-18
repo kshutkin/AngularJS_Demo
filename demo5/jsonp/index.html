@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="FiltersDemo">
+ <head>
+    <link rel="stylesheet" media="screen" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <script src="app.js"></script>
+ </head>
+ <body ng-controller="DemoController">
+    <div class="container">
+        <input type="text" ng-model="filterText">
+        <table class="table table-striped table-hover table-condensed">
+            <thead>
+                <td>Name</td>
+                <td>Surname</td>
+                <td>Is Male</td>
+                <td>Hire Date</td>
+                <td>Address</td>
+                <td>Salary</td>
+            </thead>
+            <tr ng-repeat="user in users | filter:fullName | orderBy:['male', '-fname']">
+                <td>{{user.fname}}</td>
+                <td>{{user.lname}}</td>
+                <td>{{user.male}}</td>
+                <td>{{user.date | date:'medium'}}</td>
+                <td>{{user.address | uppercase}}</td>
+                <td>{{user.salary | currency}}</td>
+            </tr>
+        </table>
+    </div>
+ </body>
+</html>
